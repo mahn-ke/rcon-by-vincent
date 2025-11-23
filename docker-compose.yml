@@ -7,6 +7,9 @@ services:
     restart: on-failure:5
     environment:
       - PORT=3007
+      - AUTH_PASSWORD=${AUTH_PASSWORD}
+      - RCON_HOST=${RCON_HOST}
+      - RCON_PASSWORD=${RCON_PASSWORD}
     ports:
       - "3007:3000"
     healthcheck:
