@@ -1,0 +1,16 @@
+#http
+version: "3.8"
+
+services:
+  app:
+    image: ghcr.io/mahn-ke/rcon-by-vincent:latest
+    restart: on-failure:5
+    environment:
+      - PORT=3007
+    ports:
+      - "3007:3000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3007/releases.ics"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
