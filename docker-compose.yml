@@ -6,7 +6,7 @@ services:
     image: ghcr.io/mahn-ke/rcon-by-vincent:latest
     restart: on-failure:5
     environment:
-      - PORT=3007
+      - PORT=3000
       - AUTH_PASSWORD=${AUTH_PASSWORD}
       - RCON_HOST=${RCON_HOST}
       - RCON_PASSWORD=${RCON_PASSWORD}
