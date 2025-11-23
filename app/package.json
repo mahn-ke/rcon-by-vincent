@@ -1,6 +1,11 @@
 {
-    "name": "rcon-by-vincent",
-    "scripts": {
-        "start": "node main.js"
-    }
+  "name": "rcon-by-vincent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "rcon": "^1.1.0"
+  }
 }
