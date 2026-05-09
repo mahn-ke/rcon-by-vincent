@@ -1,0 +1,14 @@
+{
+  "name": "minecraft-allowlist-server",
+  "version": "1.0.0",
+  "description": "Minecraft server allowlist management via RCON",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "rcon-srcds": "^2.1.1"
+  }
+}
