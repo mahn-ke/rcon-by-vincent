@@ -322,9 +322,12 @@ app.post('/allowlist/add', async (req, res) => {
       return res.status(400).json({ error: 'Something went wrong, please try again later.' });
     }
 
-    const response = await executeRconCommand(`gamemode survival ${username}`);
-    console.log(`Successfully added ${username} to allowlist: ${response}`);
-    res.status(200).json({ success: true, message: `Added ${username} to allowlist` });
+    const responseGroup = await executeRconCommand(`lp user ${username} parent add member`);
+    console.log(`Successfully added ${username} to allowlist: ${responseGroup}`);
+    
+    const responseMode = await executeRconCommand(`minecraft:gamemode survival ${username}`);
+    console.log(`Successfully set ${username} gamemode to survival: ${responseMode}`);
+    res.status(200).json({ success: true, message: `Added ${username} to allowlist and set to survival` });
   } catch (err) {
     console.error(`RCON error: ${err.message}`);
     res.status(500).json({ error: 'Something went wrong, please try again later.' });
