@@ -1,7 +1,7 @@
 #http
 services:
   app:
-    image: ghcr.io/mahn-ke/rcon-by-vincent:latest@sha256:d2001b5d8349cff7604f6afff9295bcd947c11f3c961cb55ed24fcebebfdd989
+    image: ghcr.io/mahn-ke/rcon-by-vincent:latest@sha256:d3729f003edbecc431e4eeb9c31457b18b61429d0d98604e724248b08f7e3c63
     restart: on-failure:5
     environment:
       - RCON_SERVER=${RCON_SERVER}
